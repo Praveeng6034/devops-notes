@@ -1,0 +1,21 @@
+create new user add permission:
+..................
+Login to Jenkins.
+
+Go to Manage Jenkins.
+
+Go to Configure Global Security.
+
+Select Jenkins own User Database.
+
+Tick the checkbox “Allow Users to Sign Up”.
+
+Select Matrix-based security.
+
+Select the button “Add user or group”.
+
+Write User or Group name – write the user name of the user you created.
+
+Tick the read-option.
+
+Save and Apply.
