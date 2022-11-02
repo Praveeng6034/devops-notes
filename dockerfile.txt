@@ -1,0 +1,58 @@
+  sudo yum install git
+sudo yum install maven
+mvn clean package -DskipTests
+
+Docker installation on Amazon Linux:
+sudo yum install docker
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+To Check the Status:
+sudo systemctl status docker.service
+
+Docker Login:
+
+sudo docker login -u gangavarapun
+sudo docker build -t gangavarapun/powertrain:20 .
+sudo docker images
+sudo docker container create <image id>
+docker login -u gangavarapun 
+f7b4fc18-d88f-4c8e-ac67-2ff857516ad0<access token>
+sudo docker push gangavarapun/powertrain:20
+sudo docker pull 
+To Resolve the Permission Denied Issue:
+
+Run below commands:
+
+sudo chmod 777 /var/run/docker.sock
+sudo usermod -a -G docker $USER
+
+Docker Commands:
+docker rename [CONTAINER_NAME] [NEW_CONTAINER_NAME]
+docker rmi <image name>         --- to remove the image
+docker rm <container id>        ---to remove the container
+sudo docker commit ecb73772a5bb test123 
+                   <contianer id> <image name>
+
+
+to push docker containers to docker hub:
+docker images
+docker run <image id>
+docker ps -all
+docker container start <container id>
+
+docker commit <container id> repository:tag
+docker push repository :tag
+
+
+python project:
+
+FROM python:3.7-alpine
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+RUN apk add --no-cache gcc musl-dev linux-headers
+ADD /home/ubuntu/python.py .
+RUN python python.py
+EXPOSE 8080
+COPY . .
+CMD ["flask", "run"]
+COPY ~/.ssh/known_host /root/known_host

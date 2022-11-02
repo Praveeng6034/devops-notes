@@ -1,0 +1,56 @@
+What Is Ansible?
+The best definition comes, not surprisingly, from the software’s developers: “Ansible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.” 
+
+DevOps Engineer Master's Program
+Bridge between software developers and operationsEXPLORE COURSEDevOps Engineer Master's Program
+Ansible is an open-source software solution that doesn’t depend on the typical client-server model. Ansible’s designers tout it as the only automation engine that automates everything in the whole application lifecycle as well as the continuous delivery pipeline. Difficult and time-consuming processes get changed into repeatable playbooks, which increases production speed while bringing a much-needed element of simplicity.
+
+Ansible’s name comes from a science fiction story, used to describe an instantaneous hyperspace communications system.
+
+Ansible requires a Linux/Unix host (e.g., Debian, Red Hat Enterprise Linux, CentOS, macOS, BSD) as its control machine. Also, Ansible uses the Python programming language, versions 2.7 or 3.5. Ansible runs on several cloud platforms, including: 
+
+Amazon Web Services (AWS)
+Atomic
+CenturyLink
+Cloudscale
+CloudStack
+DigitalOcean
+Dimension Data
+Docker
+Google Cloud Platform
+KVM
+Linode
+LXC
+LXD
+Microsoft Azure
+OpenStack
+OVH
+oVirt
+Packet
+Profitbricks
+PubNub
+Rackspace
+Scaleway
+SmartOS
+SoftLayer
+Univention
+VMware
+Webfaction
+XenServer.
+
+Ansible’s features include:
+
+Simplicity 
+You don’t need any unique coding skills to use Ansible’s playbooks. Ansible is easy to set up. Just run the shell script once, and you’re good to go.
+Power 
+Ansible handles highly complex IT workflows. 
+Zero Cost 
+Ansible is a free, open-source software solution.
+Flexibility 
+You can orchestrate the entire application environment no matter where you want to deploy it. Since it has hundreds of modules available, you can customize Ansible to fit your unique needs.
+Easy to Use Playbooks 
+Most of the playbooks are written in YAML, making them easy to edit and read.
+Agentless Installation 
+You can set Ansible up in minutes using OpenSSH. You also don’t need to set up agents on remote servers.
+Efficiency 
+Ansible doesn’t require you to install any extra software, so there are more resources to dedicate to your other applications.

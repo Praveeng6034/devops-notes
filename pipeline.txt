@@ -1,0 +1,59 @@
+
+agent { label 'my-defined-label' }
+
+agent { label 'kuberntes' }
+
+agent { label 'my-label1 && my-label2' } or agent { label 'my-label1 || my-label2' }
+
+
+node
+agent { node { label 'labelName' } } behaves the same as agent { label 'labelName' }, but node allows for additional options (such as customWorkspace).
+
+agent {
+    node {
+        label 'my-defined-label'
+        customWorkspace '/some/other/path'
+    }
+}
+
+pipeline {
+    agent none 
+    stages {
+        stage('Example Build') {
+            agent { docker 'maven:3.8.1-adoptopenjdk-11' } 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+        stage('Example Test') {
+            agent { docker 'openjdk:8-jre' } 
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
+            }
+        }
+    }
+}
+
+
+environment
+The environment directive specifies a sequence of key-value pairs which will be defined as environment variables for all steps, or stage-specific steps, depending on where the environment directive is located within the Pipeline.
+
+
+pipeline {
+    agent any
+    environment { 
+        CC = 'clang'
+    }
+    stages {
+        stage('Example') {
+            environment { 
+                AN_ACCESS_KEY = credentials('my-predefined-secret-text') 
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
+    }
+}

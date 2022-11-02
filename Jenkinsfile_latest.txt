@@ -1,0 +1,30 @@
+pipeline {
+  agent any
+  stages{
+    stage('SCM Checkout'){
+	  steps {
+        git branch: 'main',
+          credentialsId: 'git-crd',
+          url: 'https://github.com/praveeng6034/Testapp.git'
+	  }
+    }
+    stage("build"){
+      steps{
+        sh "mvn clean package -DskipTests"
+      }
+    }
+    stage('Build Docker Image'){
+      steps{
+        sh "pwd"
+        sh 'docker build -t docker.io/praveeng6034/practice:${BUILD_NUMBER} . >&1 | tee SomeFile.txt '
+      }
+    }
+       
+    stage('Push Docker Image to gcr.io'){
+      steps{
+        sh 'docker login -u praveeng6034 -p 856c959f-adff-4a56-b841-f820c8dfc7a3'
+        sh 'docker push docker.io/praveeng6034/practice:${BUILD_NUMBER} >&1 | tee docker.txt'
+      }
+    }
+  }
+}

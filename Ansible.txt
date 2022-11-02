@@ -1,0 +1,26 @@
+Ansible-
+default location-  /etc/ansible
+host file - its contain all ip addresses
+ansible -completely module based
+facts-to check free memory of workernodes
+playbook -single or multiple tasks
+configuration file- it contain all ansible required configuration
+templates= output interface
+handlers- it will trigger the tasks 
+roles-re usabality of code to avoid dublication
+ansible vault- to store the secure information
+
+
+for keygeneration - ssh-keygen
+to stall ansible -sudo amazon-linux-extras install ansible2
+before execute play book:
+ansible -playbook (....yaml) --syntax -ckeck
+ansible -playbook (....yaml) --list -host
+to execute playbook :
+ansible -playbook name.yaml
+
+host file location /etc/ansible
+
+
+
+

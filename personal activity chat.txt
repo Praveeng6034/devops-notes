@@ -1,0 +1,12 @@
+git hub ---done
+maven---done
+docker images---- done
+docker container ---done
+putty ----done
+putty gen ----done
+
+
+ yet to learn 
+ansible
+kubernets
+jenkins

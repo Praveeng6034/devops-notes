@@ -1,0 +1,76 @@
+Linux : > - -gt
+	>= - -ge
+	< - -lt
+	<= - -le
+	== - -eq
+	!= - -ne
+	
+	and - &&
+	!! - or
+	! - not
+
+
+
+linux command:
+
+chmod - to give read, write, execute petmissions to files
+ex- chmod 777 filename   (777- user group other)
+  other method:
+chmod u+r filename (to give read permission)
+chmod u-r file name( to remove read permission)
+r - read 
+w- write
+x - execute
+
+o - other
+g - group
+u - user
+
+0- no permission
+1 execute permission
+2 read
+3 ex and read
+4 write
+5 ex and write
+6 read and write
+7 all
+
+bin - binary
+boot - booting
+opt - optional
+sbin - system binary
+
+directory:
+mkdir - to create directory
+mkdir d1 d2 d3 - to create multiple directories
+mkdir -p univ/{cbit/{ece,mec,civil}, jntu/{eee/mining}}- to carete child directories
+ mkdir dir{1..10} - ti create 1 to 10 directories 
+
+file:
+touch 
+touch f1 f2
+
+cut>f1 - to write content in file f1
+ctrl+d - to exit from above command
+ls -list all d and f
+man - manual about command ex- man touch
+
+1 -for file
+2 - directory
+3 - directory with child directory
+n - n-2 child directories
+ 
+drwx-rwx-rwx 4 ec2-user ec2-user 28 aug 3 5:43 aws
+d- directory
+r -read
+w write
+x- execute
+1st permissions for user
+2nd root
+3rd other
+4- directory with child directory
+user
+root
+28-characters
+
+

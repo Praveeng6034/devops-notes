@@ -1,0 +1,24 @@
+open gcp
+go to gke
+then create cluster
+connect to that cluster
+kubectl create ns <name> ------ create ns
+kubectl get ns = to view ns
+upload the yaml file by using top left 3 dots
+go to ls -lrt
+vi <uploaded file>
+kubectl apply -f <uploaded file>
+kubectl get pods -n <name space>
+kubectl get svc -n <name space>
+external ip would be created use that ip along with port number
+
+youtube:eksctl
+https://www.youtube.com/watch?v=aZd0UolVwD4
+
+kubeadm:
+https://www.youtube.com/watch?v=l7gC4SgW7DU
+ 
+http://pwittrock.github.io/docs/setup/independent/install-kubeadm/
+
+
+http://pwittrock.github.io/docs/setup/independent/create-cluster-kubeadm/

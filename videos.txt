@@ -1,0 +1,9 @@
+Ansible installation:
+
+
+https://www.youtube.com/watch?v=OgnsR_Hh5Qw
+
+playbook run:
+
+
+https://www.youtube.com/watch?v=izyh2Yh33Sg

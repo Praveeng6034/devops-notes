@@ -1,0 +1,13 @@
+provider "aws" {
+region     = "ap-south-1"
+access_key = "AKIAVMNACQR4IMRBSVOD"
+secret_key = "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"
+}
+resource "aws_instance" "tfec2" {
+  ami           = "ami-024c319d5d14b463e"
+  instance_type = "t2.micro"
+  key_name = "kubernetes"
+  tags = {
+    Name = "terraform-ec2"
+  }
+}

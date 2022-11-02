@@ -1,0 +1,5 @@
+on demand - kind of "default" mode. You request an instance, if there is free capacity, you will get the instance. No long term commitment, but once you get an instance, it's yours. It may happen that you will get a message that there is no free capacity for the specific instance type and AZ (so far it happened to me only once with AWS).
+
+reserved - AWS reserves the capacity for you. You have guarantee that you will get the instance type in the selected region or AZ.
+
+spot instance - it's kind of auction / bidding of unused capacity. You ask for an instance, you provide your maximum price and if there is free capacity and your price is at the current price or higher, you will get an instance. The difference is - if the free capacity is exhausted, or the current price is higher than your maximum bid price, your spot instance is terminated . You can get a termination warning event upfront.

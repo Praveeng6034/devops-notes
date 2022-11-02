@@ -1,0 +1,38 @@
+Jenkins installation on Amazon Linux2:
+
+sudo yum -y update
+sudo systemctl reboot
+sudo amazon-linux-extras install java-openjdk11
+
+sudo tee /etc/yum.repos.d/jenkins.repo<<EOF
+[jenkins]
+name=Jenkins
+baseurl=http://pkg.jenkins.io/redhat
+gpgcheck=0
+EOF
+
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum repolist
+sudo yum install jenkins
+ 
+systemctl status jenkins
+
+Add the security rule in AWS Console---
+Goto Security-- add the the inbound rule with below details
+
+TYPE: All traffic
+Protocol: all
+Port Range: all
+Source Type: custom
+Source : 0.0.0.0/0
+then click on save rule
+
+
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+21c0368a2b8947f2b9ca609f3aab5dd9
+
+http://54.242.143.207:8080/
+
+
